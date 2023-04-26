@@ -272,6 +272,7 @@ def train(
 
     trainer.train(resume_from_checkpoint=resume_from_checkpoint)
 
+    model = model.cpu()
     model.save_pretrained(output_dir)
 
     print(
